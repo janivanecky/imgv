@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IMG VIEWER</title>
+</head>
+<body>
+<table>
+    <tr>
+        <!-- Sub-directories list --> 
+        <td style="vertical-align: top;">
+            <ul style="list-style-type:none;">
+                {% for dir in dirs %}
+                <li><a href="/{{dir}}">{{dir}}</a></li>
+                {% endfor %}
+            </ul>
+        </td>
+
+        <!-- Image list --> 
+        <td>
+            <table>
+                {% for img in imgs %}
+                <tr>
+                    <td style="vertical-align: top;">
+                        {{img}}
+                    </td>
+                    <td>
+                        <img src="/imgs/{{img}}"/>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
