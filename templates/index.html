@@ -9,8 +9,8 @@
         <!-- Sub-directories list --> 
         <td style="vertical-align: top;">
             <ul style="list-style-type:none;">
-                {% for dir in dirs %}
-                <li><a href="/{{dir}}">{{dir}}</a></li>
+                {% for dir, dir_path in dirs %}
+                <li><a href="/{{dir_path}}">{{dir}}</a></li>
                 {% endfor %}
             </ul>
         </td>
@@ -18,13 +18,13 @@
         <!-- Image list --> 
         <td>
             <table>
-                {% for img in imgs %}
+                {% for img, img_path in imgs %}
                 <tr>
                     <td style="vertical-align: top;">
                         {{img}}
                     </td>
                     <td>
-                        <img src="/imgs/{{img}}"/>
+                        <img src="/imgs/{{img_path}}"/>
                     </td>
                 </tr>
                 {% endfor %}
